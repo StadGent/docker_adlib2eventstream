@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./data/db:/var/lib/postgres/data
+    restart: always
+  adlib-backend:
+    image: adlib-backend
+    restart: always
+    volumes: 
+      - './config/adlib2eventstream/config.tml:/usr/src/app/config.tml'
+  eventstream:
+    image: eventstream
+    restart: always
+    volumes: 
+      - './config/adlib2eventstream/config.tml:/usr/src/app/config.tml'
