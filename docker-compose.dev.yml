@@ -7,5 +7,10 @@ services:
       - '3000:3000'
   db:
     restart: "no"
+    environment:
+      ACCEPT_EULA: 'Y'
+      SA_PASSWORD: 'Password123.'
+    ports:
+      - '1433:1433'
   adlib-backend:
     restart: "no"
