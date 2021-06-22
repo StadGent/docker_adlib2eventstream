@@ -10,9 +10,9 @@ services:
     image: adlib-backend
     restart: always
     volumes: 
-      - './config/adlib2eventstream/config.tml:/usr/src/app/config.tml'
+      - './config/adlib2eventstream/config.tml:/usr/src/app/src/config.tml'
   eventstream:
     image: eventstream
     restart: always
     volumes: 
-      - './config/adlib2eventstream/config.tml:/usr/src/app/config.tml'
+      - './config/adlib2eventstream/config.tml:/usr/src/app/src/config.tml'
